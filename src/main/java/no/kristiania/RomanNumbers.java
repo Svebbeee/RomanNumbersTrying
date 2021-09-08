@@ -11,8 +11,27 @@ public class RomanNumbers {
         System.out.println(toRoman(input));
     }
 
-    public static int toRoman(int input){
-        return input+1;
+    public static String toRoman(int input){
+        String result = "";
+        String[] RomanNumberArray = {"I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"};
+        Integer[] NumberArray = {1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000};
+
+        for (int i = NumberArray.length-1; i >= 0 ; i--) {
+            String RomanNumber = RomanNumberArray[i];
+            int Number = NumberArray[i];
+            int timesRepeated = input/Number;
+            if (Number<=input){
+                for (int j = 0; j < timesRepeated; j++) {
+                    result += RomanNumber;
+                }
+                input = input%Number;
+            }
+
+
+        }
+
+
+        return result;
     }
 
 }
