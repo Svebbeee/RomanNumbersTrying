@@ -9,9 +9,4 @@ public class RomanNumbersTest {
     void DummyTest(){
         assertEquals(42, 6*7);
     }
-
-    @Test
-    void DummyTestTwo(){
-        assertEquals(40, 8*5);
-    }
 }
