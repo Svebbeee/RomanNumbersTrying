@@ -8,6 +8,11 @@ public class RomanNumbers {
 
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
-        System.out.println(input);
+        System.out.println(toRoman(input));
     }
+
+    public static int toRoman(int input){
+        return input+1;
+    }
+
 }
